@@ -9,7 +9,7 @@
 
 ## JSONAPILARAVEL 
 
-Aplicación realizada en Laravel para consumir api de https://jsonplaceholder.typicode.com/. Esta aplicacion muestras a todos los usuarios existentes y los "TODOS" de cada usuario.
+Aplicación realizada en Laravel para consumir api de https://jsonplaceholder.typicode.com/. Esta aplicacion muestras a todos los usuarios existentes y los "TODOS" de cada usuario. Se pueden hacer las operaciones básicas de un crud ( get, post, put,delete).
 
 
 ## Logica
