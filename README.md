@@ -7,56 +7,38 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## JSONAPILARAVEL 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Aplicación realizada en Laravel para consumir api de https://jsonplaceholder.typicode.com/. Esta aplicacion muestras a todos los usuarios existentes y los "TODOS" de cada usuario.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Logica
 
-## Learning Laravel
+Se crearon dos Modelos:
+-Modelo User: Desde aqui se implementaron los metodos para consumir la Api y obtener todos los users, utilizando el facade Http para hacer la solictud a los endpoint de /users.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-Modelo Todo: Desde aqui se implementaron los metodos para consumir la Api y obtener, guardar , actualizar y elimiar  "TODOS" segun la accion requerida. Se  utiló tambien el facade Http para hacer la solictud a los endpoint de /todos.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+Se crearon dos controllers:
+-TodoController: Gestiona las peticiones enviadas por la vista o front en lo referente a "TODOS", estas peticiones las revisa y si es necesario  se comunica con el modelo ya sea para obtener , guardar, actualizar o eliminar datos. Y devuelve la información a la vista según el resultado.
+-UserController: Gestiona las peticiones enviadas por la vista o front en lo referente a users, estas peticiones las revisa y si es necesario  se comunica con el modelo ya sea para obtener , guardar, actualizar o eliminar datos. Y devuelve la información a la vista según el resultado. 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Se crearon dos vista principales:
+- Vista inicio(welcome): Muestra todos los usuarios con sus datos. Cada usuario tiene un boton "ver Todos". Al hacer clic en el boton direcciona a otra vista en la que se muestra todas las "TODOS" del usuario.
 
-### Premium Partners
+-Vista de "TODOS"(show): Muestra todas las "TODOS" de un usuario en especifico. Desde esta vista se puede agregar, eliminar y editar cada "TODO".
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+Para hacer las peticiones desde la vista se crearon las rutas correspondientes según el caso para get, post, put, delete. Segun el caso se dirige la peticon al controlador especifico y su metodo.  Algunas peticiones se realizan mediante ajax para no recargar la página ni direccionar a otra vista.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
