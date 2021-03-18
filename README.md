@@ -17,7 +17,7 @@ Aplicación realizada en Laravel para consumir api de https://jsonplaceholder.ty
 Se crearon dos Modelos:
 -Modelo User: Desde aqui se implementaron los metodos para consumir la Api y obtener todos los users, utilizando el facade Http para hacer la solictud a los endpoint de /users.
 
--Modelo Todo: Desde aqui se implementaron los metodos para consumir la Api y obtener, guardar , actualizar y elimiar  "TODOS" segun la accion requerida. Se  utiló tambien el facade Http para hacer la solictud a los endpoint de /todos.
+-Modelo Todo: Desde aqui se implementaron los metodos para consumir la Api y obtener, guardar , actualizar y elimiar  "TODOS" segun la accion requerida. Se  utilizó tambien el facade Http para hacer la solictud a los endpoint de /todos.
 
 
 Se crearon dos controllers:
