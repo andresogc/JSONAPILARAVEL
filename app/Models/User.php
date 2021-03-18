@@ -50,4 +50,11 @@ class User extends Authenticatable
         return $userArray;
     }
 
+    public function getUsers(){
+
+        $users= HTTP::get('https://jsonplaceholder.typicode.com/users');
+        $usersArray= $users->json();
+        return $usersArray;
+    }
+
 }
