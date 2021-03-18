@@ -22,7 +22,7 @@ Se crearon dos Modelos:
 
 Se crearon dos controllers:
 - TodoController: Gestiona las peticiones enviadas por la vista o front en lo referente a "TODOS", estas peticiones las revisa y si es necesario  se comunica con el modelo ya sea para obtener , guardar, actualizar o eliminar datos. Y devuelve la información a la vista según el resultado.
--UserController: Gestiona las peticiones enviadas por la vista o front en lo referente a users, estas peticiones las revisa y si es necesario  se comunica con el modelo ya sea para obtener , guardar, actualizar o eliminar datos. Y devuelve la información a la vista según el resultado. 
+- UserController: Gestiona las peticiones enviadas por la vista o front en lo referente a users, estas peticiones las revisa y si es necesario  se comunica con el modelo ya sea para obtener , guardar, actualizar o eliminar datos. Y devuelve la información a la vista según el resultado. 
 
 Se crearon dos vista principales:
 - Vista inicio(welcome): Muestra todos los usuarios con sus datos. Cada usuario tiene un boton "ver Todos". Al hacer clic en el boton direcciona a otra vista en la que se muestra todas las "TODOS" del usuario.
